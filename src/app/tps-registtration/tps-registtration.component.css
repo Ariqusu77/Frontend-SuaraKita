@@ -1,0 +1,26 @@
+.main-card{
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+}
+
+#welcome-card{
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+}
+
+#tps-regist-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.confirmation-data{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-left: 8px;
+}

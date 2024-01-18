@@ -1,0 +1,33 @@
+.example-card {
+max-width: 700px;
+margin: auto;
+box-shadow: 0 0 0;
+}
+
+.action-card-center{
+    padding : 0 24px;
+    font-weight: 600;
+    box-shadow: 0 1px 2px #666;
+}
+
+.contents{
+    margin: 18px 0;
+}
+
+#welcome-card{
+    height: 70%;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+}
+
+#welcome-header{
+    font-size: 60px;
+    font-weight: 500;
+}
+
+#daftar-tps:hover {
+    box-shadow: 0 2px 4px #666;
+}

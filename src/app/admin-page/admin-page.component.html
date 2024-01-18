@@ -1,0 +1,19 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <mat-nav-list>
+        @for (link of linked; track link) {
+          <mat-list-item style="margin-right: 20px; padding-left: 20px;">
+            <a matListItemTitle routerlink="">{{link.name}}</a>
+            <mat-icon matListItemIcon>{{link.icon}}</mat-icon>
+          </mat-list-item>
+        }
+      </mat-nav-list>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+    </div>
+  
+</mat-drawer-container>

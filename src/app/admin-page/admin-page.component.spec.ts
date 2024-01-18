@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SelectCardBaseComponent } from './select-card-base.component';
+import { AdminPageComponent } from './admin-page.component';
 
-describe('SelectCardBaseComponent', () => {
-  let component: SelectCardBaseComponent;
-  let fixture: ComponentFixture<SelectCardBaseComponent>;
+describe('AdminPageComponent', () => {
+  let component: AdminPageComponent;
+  let fixture: ComponentFixture<AdminPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SelectCardBaseComponent]
+      imports: [AdminPageComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(SelectCardBaseComponent);
+    fixture = TestBed.createComponent(AdminPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
