@@ -1,13 +1,21 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { SelectCardBaseComponent } from './select-card-base/select-card-base.component';
-import { ClarityModule } from "@clr/angular";
+
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { TpsRegisttrationComponent } from './tps-registtration/tps-registtration.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ CommonModule, RouterOutlet, SelectCardBaseComponent],
+  imports: [ 
+    CommonModule, 
+    RouterOutlet, 
+    LandingPageComponent,
+    NavigationBarComponent,
+    TpsRegisttrationComponent, 
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

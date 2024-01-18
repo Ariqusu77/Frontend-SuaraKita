@@ -1,0 +1,19 @@
+<div id="welcome-card">
+    <mat-card class="example-card" [class.mat-elevation-z4]>
+        <mat-card-header>
+            <p mat-card-title id="welcome-header">
+                Welcome to <span style="background: linear-gradient( 45deg, #6666ff 30%,#E4A0F7);">Suara Kita</span>
+            </p>
+        </mat-card-header>
+        <mat-card-content class="contents">
+            <p>{{longText}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button id="daftar-tps" class="action-card-center" (click)="navigateToRegist()" >
+                Register your TPS
+            </button>
+            <span style="width: 24px;"></span>
+            <button mat-button class="action-card-center">Read the Guidebook</button>
+        </mat-card-actions>
+    </mat-card>
+</div> 

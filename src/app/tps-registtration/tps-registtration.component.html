@@ -1,0 +1,69 @@
+<div id="welcome-card">
+    <mat-card class="main-card">
+        <mat-card-header>
+            <mat-card-title>Pendaftaran titik Tempat Pemungutan Suara</mat-card-title>
+            <mat-card-subtitle>Masukkan data titik TPS anda yang telah ditentukan oleh Pantarlih</mat-card-subtitle>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content id="tps-regist-content">
+            <mat-stepper linear>
+                <mat-step>
+                    <ng-template matStepLabel>Masukkan Kota/Kabupaten</ng-template>
+                    <form [formGroup]="form">
+                      <mat-form-field>
+                        <mat-label>Pilih Kota :</mat-label>
+                        <mat-select placeholder="Choose an option" formControlName="kota" required>
+                          <mat-option value="Surabaya">Surabaya</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="form.get('kota')?.hasError('required')">Option is required</mat-error>
+                      </mat-form-field>
+                    </form>
+                    <div>
+                      <button mat-button [disabled]="form.get('kota')?.hasError('required')" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step>
+                    <ng-template matStepLabel>Masukkan Kecamatan</ng-template>
+                    <form [formGroup]="form">
+                      <mat-form-field>
+                        <mat-label>Pilih Kecamatan :</mat-label>
+                        <mat-select placeholder="Choose an option" formControlName="kecamatan" required>
+                          <mat-option value="Sukolilo">Sukolilo</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="form.get('kecamatan')?.hasError('required')">Option is required</mat-error>
+                      </mat-form-field>
+                    </form>
+                    <div>
+                      <button mat-button [disabled]="form.get('kecamatan')?.hasError('required')" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step>
+                    <ng-template matStepLabel>Masukkan Kelurahan</ng-template>
+                    <form [formGroup]="form">
+                      <mat-form-field>
+                        <mat-label>Pilih Kelurahan :</mat-label>
+                        <mat-select placeholder="Choose an option" formControlName="kelurahan" required>
+                          <mat-option value="ITS">ITS</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="form.get('kelurahan')?.hasError('required')">Option is required</mat-error>
+                      </mat-form-field>
+                    </form>
+                    <div>
+                      <button mat-button [disabled]="form.get('kelurahan')?.hasError('required')" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step>
+                    <ng-template matStepLabel>Konfirmasi</ng-template>
+                    <ng-template matStepContent>
+                      <p class="confirmation-data">
+                      Kota      : {{this.form.get('kota')?.value}} <br>
+                      Kecamatan : {{this.form.get('kecamatan')?.value}} <br>
+                      Kelurahan : {{this.form.get('kelurahan')?.value}} <br>
+                      </p>
+                      <button mat-button (click)="navigateToAdmin()">Konfirmasi</button>
+                    </ng-template>
+                </mat-step>
+              </mat-stepper>
+        </mat-card-content>
+    </mat-card>    
+</div>
